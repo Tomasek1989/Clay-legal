@@ -558,6 +558,7 @@ nav a[href="#kontakt"] {
     border-left: 2px solid var(--gold);
     border-radius: 0 8px 8px 0;
     background: #FAFBFC;
+    overflow: hidden;
     transition: border-left-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1152,6 +1153,11 @@ footer a {
 
     .accordion-body {
         padding: 0 18px;
+    }
+
+    .accordion-body-inner {
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     .accordion-number {

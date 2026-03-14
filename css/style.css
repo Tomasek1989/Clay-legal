@@ -240,15 +240,7 @@ nav a[href="#kontakt"] {
     }
 }
 
-@media (max-width: 640px) {
-    .hero-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .stat-value {
-        font-size: 2rem;
-    }
-}
+/* hero-stats 640px — see consolidated mobile block at bottom of file */
 
 .two-column {
     display: grid;
@@ -436,22 +428,7 @@ nav a[href="#kontakt"] {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .onas-block {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .onas-main-title {
-        font-size: 1.8rem;
-        margin-bottom: 36px;
-    }
-
-    .onas-headline {
-        font-size: 1.3rem;
-    }
-
-}
+/* onas-block 768px — see consolidated mobile block at bottom of file */
 
 /* Team */
 .team-section {
@@ -561,17 +538,7 @@ nav a[href="#kontakt"] {
     opacity: 0.7;
 }
 
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-}
+/* team-grid breakpoints — see consolidated mobile block at bottom of file */
 
 /* Specializace */
 .specializace-intro {
@@ -1006,15 +973,7 @@ nav a[href="#kontakt"] {
     background: #B8944A;
 }
 
-@media (max-width: 900px) {
-    .kontakt-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-}
+/* kontakt-layout/form-row breakpoints — see consolidated mobile block at bottom of file */
 
 /* Footer */
 footer {
@@ -1041,27 +1000,200 @@ footer a {
     color: var(--white);
 }
 
-/* Responsive */
+/* ============================================================
+   RESPONSIVE — mobile / tablet
+   Only media queries below. Desktop styles are untouched.
+   ============================================================ */
+
+/* ---- 768px breakpoint ---- */
 @media (max-width: 768px) {
+
+    /* --- Container --- */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* --- Typography --- */
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* --- Navigation ---
+       Hide the nav list; on mobile the page is short enough that
+       anchor links in a collapsed bar would require a hamburger menu
+       (JS-driven). Without one, we hide the list and keep only the logo
+       so the header never overflows horizontally.
+    */
+    nav ul {
+        display: none;
+    }
+
+    /* --- Hero --- */
+    .hero-content {
+        padding: 40px 16px 24px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* --- Sections --- */
+    .section {
+        padding: 48px 0;
+    }
+
+    /* --- Two-column layouts --- */
     .two-column,
     .contact-content {
         grid-template-columns: 1fr;
     }
 
-    .footer-content {
+    /* --- O nás block (200px label col → full width) --- */
+    .onas-block {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 32px 0;
+    }
+
+    .onas-main-title {
+        font-size: 1.8rem;
+        margin-bottom: 28px;
+    }
+
+    .onas-headline {
+        font-size: 1.1rem;
+    }
+
+    /* --- Accordion (Specializace) --- */
+    .accordion-header {
+        padding: 16px 18px;
+        gap: 12px;
+    }
+
+    .accordion-body {
+        padding: 0 18px;
+    }
+
+    .accordion-number {
+        font-size: 1rem;
+        min-width: 28px;
+    }
+
+    .accordion-title {
+        font-size: 1rem;
+    }
+
+    /* --- Reference / Testimonial slider --- */
+    .reference-section {
+        padding: 64px 0;
+    }
+
+    .reference-header {
+        margin-bottom: 36px;
+    }
+
+    .testimonial-card {
+        padding: 28px 22px;
+        /* width controlled by JS; ensure it never exceeds viewport */
+        max-width: 100%;
+    }
+
+    /* --- Contact (Kontakt) --- */
+    .kontakt-layout {
         grid-template-columns: 1fr;
     }
 
+    .kontakt-form-wrap {
+        padding: 24px 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Team grid --- */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* --- Cards grid (legacy) --- */
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Footer --- */
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---- 640px breakpoint ---- */
+@media (max-width: 640px) {
+
+    /* --- Typography --- */
     h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
-    nav ul {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* --- Hero stats: keep 2-col even at small widths so 4 items
+          fit without a mile of vertical scrolling ---  */
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-value {
+        font-size: 1.8rem;
+    }
+
+    .stat {
+        padding: 14px 12px;
+    }
+
+    /* --- Section padding --- */
+    .section {
+        padding: 36px 0;
+    }
+
+    /* --- Reference section (has hard-coded 120px padding) --- */
+    .reference-section {
+        padding: 48px 0;
+    }
+
+    /* --- Accordion header text wraps better --- */
+    .accordion-header {
+        padding: 14px 14px;
+    }
+
+    .accordion-body {
+        padding: 0 14px;
+    }
+
+    /* --- Kontakt cards spacing --- */
+    .kontakt-info {
+        gap: 12px;
+        display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
-    nav li {
-        margin: 10px 0;
+    /* --- Team grid: single column on very small screens --- */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Hero content --- */
+    .hero-content {
+        padding: 32px 14px 16px;
     }
 }

@@ -1151,15 +1151,18 @@ footer a {
         gap: 12px;
     }
 
-    /* Na mobilu nahradit grid trik spolehlivým display none/block */
+    /* Na mobilu nahradit grid trik spolehlivým max-height */
     .accordion-body {
-        display: none;
+        display: block;
         grid-template-rows: unset;
+        max-height: 0;
+        overflow: hidden;
         padding: 0 18px;
+        transition: max-height 0.35s ease;
     }
 
     .accordion-item.open .accordion-body {
-        display: block;
+        max-height: 600px;
     }
 
     .accordion-body > * {

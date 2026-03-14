@@ -1000,6 +1000,80 @@ footer a {
     color: var(--white);
 }
 
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Mobile full-screen menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--navy);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.mobile-menu.open {
+    display: flex;
+    opacity: 1;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.mobile-menu ul li a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.mobile-menu ul li a:hover {
+    color: var(--gold);
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
 /* ============================================================
    RESPONSIVE — mobile / tablet
    Only media queries below. Desktop styles are untouched.
@@ -1026,14 +1100,13 @@ footer a {
         font-size: 1.2rem;
     }
 
-    /* --- Navigation ---
-       Hide the nav list; on mobile the page is short enough that
-       anchor links in a collapsed bar would require a hamburger menu
-       (JS-driven). Without one, we hide the list and keep only the logo
-       so the header never overflows horizontally.
-    */
+    /* --- Navigation --- */
     nav ul {
         display: none;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     /* --- Hero --- */

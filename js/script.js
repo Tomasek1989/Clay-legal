@@ -221,12 +221,58 @@ function initCasesSlider() {
     startTimer();
 }
 
+// Hamburger menu
+(function initMobileMenu() {
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('mobileMenuClose');
+
+    function openMenu() {
+        menu.classList.add('open');
+        menu.setAttribute('aria-hidden', 'false');
+        btn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        menu.classList.remove('open');
+        menu.setAttribute('aria-hidden', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
+    btn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+})();
+
 // Spustit count-up po načtení stránky (s malým zpožděním pro fade-in)
 window.addEventListener('load', () => {
     setHeroHeight();
     initCasesSlider();
     initTestimonialSlider();
-    setTimeout(startStatsCountUp, 700);
+
+    // Na mobilu rovnou zobraz finální hodnoty bez animace
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.stat-value').forEach(el => {
+            const target = parseFloat(el.getAttribute('data-target'));
+            const suffix = el.getAttribute('data-suffix') || '';
+            const isFloat = el.getAttribute('data-target').includes('.');
+            el.textContent = isFloat
+                ? target.toFixed(1).replace('.', ',') + suffix
+                : formatNumber(target) + suffix;
+            el.dataset.counted = 'true';
+        });
+    } else {
+        setTimeout(startStatsCountUp, 700);
+    }
 });
 
 // Smooth scrolling for nav links

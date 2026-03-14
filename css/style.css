@@ -1151,13 +1151,25 @@ footer a {
         gap: 12px;
     }
 
+    /* Na mobilu nahradit grid trik spolehlivým display none/block */
     .accordion-body {
+        display: none;
+        grid-template-rows: unset;
         padding: 0 18px;
+    }
+
+    .accordion-item.open .accordion-body {
+        display: block;
+    }
+
+    .accordion-body > * {
+        overflow: visible;
     }
 
     .accordion-body-inner {
         word-break: break-word;
         overflow-wrap: break-word;
+        padding-bottom: 18px;
     }
 
     .accordion-number {

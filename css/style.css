@@ -85,6 +85,7 @@ nav .container {
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-right: -1.5cm;
 }
 
 nav ul {

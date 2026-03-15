@@ -81,6 +81,12 @@ nav .container {
     margin-top: 5mm;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -126,7 +132,8 @@ nav a[href="#kontakt"] {
     padding: 5px 11px;
     border-radius: 4px;
     transition: border-color 0.2s, color 0.2s;
-    margin-left: 8px;
+    margin-left: calc(8px + 1.5cm);
+    margin-top: 2mm;
 }
 
 .lang-switch:hover {

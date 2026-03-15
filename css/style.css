@@ -24,22 +24,22 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 4rem);
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 2.5vw, 3.2rem);
     margin-bottom: 1rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: clamp(900px, 85vw, 1400px);
     margin: 0 auto;
-    padding: 0 20px 0 0;
+    padding: 0 clamp(12px, 1.5vw, 24px) 0 0;
 }
 
 
@@ -65,7 +65,7 @@ header {
     background: #2D3748;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    min-height: 80px;
+    min-height: clamp(64px, 5.5vw, 96px);
 }
 
 nav .container {
@@ -98,7 +98,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 20px;
+    margin: 0 clamp(10px, 1.4vw, 24px);
 }
 
 nav a {
@@ -106,7 +106,7 @@ nav a {
     color: white;
     font-weight: 400;
     font-family: 'Playfair Display', serif;
-    font-size: 16px;
+    font-size: clamp(13px, 1.1vw, 17px);
     transition: color 0.3s;
 }
 
@@ -186,7 +186,7 @@ nav a[href="#kontakt"] {
     color: var(--white);
     position: relative;
     z-index: 10;
-    padding: 80px 20px 80px;
+    padding: clamp(48px, 6vw, 120px) clamp(16px, 2vw, 40px);
 }
 
 .hero-text {
@@ -208,13 +208,13 @@ nav a[href="#kontakt"] {
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
     margin-bottom: 2rem;
 }
 
 /* Sections */
 .section {
-    padding: 80px 0;
+    padding: clamp(48px, 6vw, 120px) 0;
 }
 
 /* Stats */
@@ -238,14 +238,14 @@ nav a[href="#kontakt"] {
 }
 
 .stat {
-    padding: 20px 24px;
+    padding: clamp(14px, 1.5vw, 28px) clamp(16px, 1.8vw, 32px);
     text-align: center;
     color: var(--white);
 }
 
 .stat-value {
     font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
+    font-size: clamp(1.6rem, 2.2vw, 3rem);
     font-weight: 700;
     color: var(--gold);
     margin-bottom: 0.4rem;
@@ -253,7 +253,7 @@ nav a[href="#kontakt"] {
 }
 
 .stat-label {
-    font-size: 0.85rem;
+    font-size: clamp(0.7rem, 0.8vw, 1rem);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     opacity: 0.7;
@@ -285,17 +285,17 @@ nav a[href="#kontakt"] {
 }
 
 .onas-main-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 2.5vw, 3.2rem);
     font-weight: 700;
     color: var(--navy);
-    margin-bottom: 24px;
+    margin-bottom: clamp(16px, 1.8vw, 32px);
 }
 
 .onas-block {
     display: grid;
     grid-template-columns: 200px 1fr;
-    gap: 48px;
-    padding: 48px 0;
+    gap: clamp(24px, 3.5vw, 64px);
+    padding: clamp(32px, 3.5vw, 64px) 0;
     align-items: start;
 }
 
@@ -328,7 +328,7 @@ nav a[href="#kontakt"] {
     border-left: 2px solid var(--gold);
     border-radius: 0 8px 8px 0;
     background: #FAFBFC;
-    padding: 24px 28px;
+    padding: clamp(18px, 1.8vw, 32px) clamp(20px, 2vw, 36px);
     transition: border-left-color 0.3s ease;
 }
 
@@ -338,7 +338,7 @@ nav a[href="#kontakt"] {
 
 .onas-headline {
     font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
+    font-size: clamp(0.9rem, 1vw, 1.2rem);
     font-weight: 700;
     line-height: 1.4;
     color: var(--navy);
@@ -347,7 +347,7 @@ nav a[href="#kontakt"] {
 }
 
 .onas-text {
-    font-size: 0.88rem;
+    font-size: clamp(0.8rem, 0.85vw, 1rem);
     line-height: 1.75;
     color: #718096;
     margin: 0;
@@ -462,7 +462,7 @@ nav a[href="#kontakt"] {
 
 .section-header {
     text-align: left;
-    margin-bottom: 48px;
+    margin-bottom: clamp(28px, 3.5vw, 64px);
 }
 
 .section-header h2 {
@@ -476,7 +476,7 @@ nav a[href="#kontakt"] {
 }
 
 .team-category {
-    margin-bottom: 40px;
+    margin-bottom: clamp(24px, 3vw, 56px);
 }
 
 .team-category:last-child {
@@ -498,14 +498,14 @@ nav a[href="#kontakt"] {
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 10px;
+    gap: clamp(8px, 0.8vw, 14px);
 }
 
 .team-card {
     background: #EEF0F3;
     border: 1px solid #E8EDF2;
     border-radius: 8px;
-    padding: 18px 20px;
+    padding: clamp(14px, 1.4vw, 22px) clamp(16px, 1.5vw, 24px);
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -517,7 +517,7 @@ nav a[href="#kontakt"] {
 
 .team-card-name {
     font-family: 'Playfair Display', serif;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 0.95vw, 1.1rem);
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 4px;
@@ -545,7 +545,7 @@ nav a[href="#kontakt"] {
     gap: 7px;
     color: var(--navy);
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: clamp(0.72rem, 0.75vw, 0.9rem);
     transition: color 0.2s;
 }
 
@@ -563,17 +563,17 @@ nav a[href="#kontakt"] {
 
 /* Specializace */
 .specializace-intro {
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 0.9vw, 1.05rem);
     line-height: 1.8;
     color: #4A5568;
     max-width: 720px;
-    margin-bottom: 48px;
+    margin-bottom: clamp(28px, 3.5vw, 64px);
 }
 
 .accordion {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: clamp(8px, 0.8vw, 14px);
 }
 
 .accordion-item {
@@ -593,12 +593,12 @@ nav a[href="#kontakt"] {
 .accordion-header {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: clamp(14px, 1.5vw, 24px);
     width: 100%;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 22px 28px;
+    padding: clamp(16px, 1.6vw, 28px) clamp(20px, 2vw, 36px);
     text-align: left;
     transition: color 0.2s;
     position: relative;
@@ -610,7 +610,7 @@ nav a[href="#kontakt"] {
 
 .accordion-number {
     font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
+    font-size: clamp(0.95rem, 1.05vw, 1.3rem);
     font-weight: 700;
     color: var(--gold);
     min-width: 36px;
@@ -618,7 +618,7 @@ nav a[href="#kontakt"] {
 
 .accordion-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
+    font-size: clamp(0.95rem, 1.05vw, 1.3rem);
     font-weight: 700;
     color: var(--gold);
     flex: 1;
@@ -667,7 +667,7 @@ nav a[href="#kontakt"] {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.35s ease;
-    padding: 0 28px;
+    padding: 0 clamp(20px, 2vw, 36px);
 }
 
 .accordion-item.open .accordion-body {
@@ -679,7 +679,7 @@ nav a[href="#kontakt"] {
 }
 
 .accordion-body-inner {
-    padding-bottom: 24px;
+    padding-bottom: clamp(16px, 1.8vw, 32px);
     padding-top: 0;
     margin-top: -2mm;
 }
@@ -723,11 +723,11 @@ nav a[href="#kontakt"] {
 .reference-section {
     background: var(--navy);
     color: var(--white);
-    padding: 80px 0 120px;
+    padding: clamp(48px, 6vw, 120px) 0 clamp(60px, 9vw, 160px);
 }
 
 .reference-header {
-    margin-bottom: 56px;
+    margin-bottom: clamp(32px, 4vw, 72px);
 }
 
 .reference-title {
@@ -870,7 +870,7 @@ nav a[href="#kontakt"] {
 .kontakt-card {
     background: var(--white);
     border-radius: 10px;
-    padding: 20px 24px;
+    padding: clamp(14px, 1.5vw, 28px) clamp(16px, 1.8vw, 32px);
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
 
@@ -896,7 +896,7 @@ nav a[href="#kontakt"] {
 .kontakt-form-wrap {
     background: var(--white);
     border-radius: 12px;
-    padding: 40px;
+    padding: clamp(24px, 3vw, 56px);
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     display: flex;
     flex-direction: column;

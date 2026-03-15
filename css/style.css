@@ -114,6 +114,12 @@ nav a:hover {
     color: var(--gold);
 }
 
+nav a.nav-active {
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 2px;
+}
+
 nav a[href="#kontakt"] {
     background: var(--gold);
     color: var(--navy);

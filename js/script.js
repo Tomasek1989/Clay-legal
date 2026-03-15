@@ -1,3 +1,26 @@
+// Active nav link highlight on scroll
+(function initNavHighlight() {
+    const navLinks = document.querySelectorAll('nav ul a[href^="#"]');
+    const sectionIds = Array.from(navLinks).map(a => a.getAttribute('href').slice(1));
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+    function setActive(id) {
+        navLinks.forEach(a => {
+            a.classList.toggle('nav-active', a.getAttribute('href') === '#' + id);
+        });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setActive(entry.target.id);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    sections.forEach(s => observer.observe(s));
+})();
+
 // Scroll animations
 const sections = document.querySelectorAll('.section');
 

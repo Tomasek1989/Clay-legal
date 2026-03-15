@@ -874,6 +874,12 @@ nav a[href="#kontakt"] {
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
 
+.kontakt-card-subsection + .kontakt-card-subsection {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #E8EDF2;
+}
+
 .kontakt-card-label {
     font-size: 1rem;
     font-weight: 600;

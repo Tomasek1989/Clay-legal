@@ -1152,6 +1152,10 @@ footer a {
         display: none;
     }
 
+    .nav-right {
+        margin-right: 0;
+    }
+
     .hamburger {
         display: flex;
     }

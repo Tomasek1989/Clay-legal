@@ -1102,6 +1102,25 @@ footer a {
     line-height: 1;
 }
 
+.mobile-menu-lang {
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.mobile-menu-lang:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
 /* ============================================================
    RESPONSIVE — mobile / tablet
    Only media queries below. Desktop styles are untouched.
@@ -1137,7 +1156,19 @@ footer a {
         display: flex;
     }
 
+    .lang-switch {
+        display: none;
+    }
+
     /* --- Hero --- */
+    #hero video {
+        display: none;
+    }
+
+    #hero {
+        background: var(--navy);
+    }
+
     .hero-content {
         padding: 40px 16px 24px;
     }

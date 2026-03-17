@@ -65,6 +65,7 @@ header {
     background: #2D3748;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 2px solid var(--gold);
     min-height: clamp(64px, 5.5vw, 96px);
 }
 

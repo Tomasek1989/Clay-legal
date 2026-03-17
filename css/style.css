@@ -1227,6 +1227,7 @@ footer a {
 
     .accordion-item.open .accordion-body {
         max-height: 2000px;
+        padding-top: 12px;
     }
 
     .accordion-body > * {

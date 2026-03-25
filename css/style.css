@@ -67,6 +67,32 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-bottom: 2px solid var(--gold);
     min-height: clamp(64px, 5.5vw, 96px);
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(212, 175, 55, 0.15) 40%,
+        rgba(255, 235, 120, 0.3) 50%,
+        rgba(212, 175, 55, 0.15) 60%,
+        transparent 100%
+    );
+    animation: navShimmer 1.8s ease-in-out 0.3s 1 both;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes navShimmer {
+    0%   { left: -60%; }
+    100% { left: 160%; }
 }
 
 nav .container {
@@ -80,7 +106,20 @@ nav .container {
     width: auto;
     object-fit: contain;
     margin-top: 5mm;
+    display: block;
 }
+
+.logo-wrap {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 5mm;
+}
+
+.logo-wrap .logo {
+    margin-top: 0;
+}
+
 
 .nav-right {
     display: flex;

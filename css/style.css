@@ -196,6 +196,7 @@ nav a[href="#kontakt"] {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    background: #1a1a2e url('../video/hero-poster.jpg') center/cover no-repeat;
 }
 
 #hero video {

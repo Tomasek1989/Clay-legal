@@ -206,6 +206,12 @@ nav a[href="#kontakt"] {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    animation: videoFadeIn 1.2s ease-in both;
+}
+
+@keyframes videoFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .overlay {

@@ -247,6 +247,27 @@ nav a[href="#kontakt"] {
 .hero-content h1 {
     margin-bottom: 1rem;
     font-weight: 400;
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #ffffff 40%,
+        #D4AF37 47%,
+        #FFF5A0 50%,
+        #D4AF37 53%,
+        #ffffff 60%,
+        #ffffff 100%
+    );
+    background-size: 250% auto;
+    background-position: 0% center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShimmer 1.2s ease-in-out 0.3s 1 both;
+}
+
+@keyframes textShimmer {
+    0%   { background-position: 100% center; }
+    100% { background-position: 0% center; }
 }
 
 .ampersand {

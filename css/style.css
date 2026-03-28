@@ -809,24 +809,23 @@ nav a[href="#kontakt"] {
 }
 
 .accordion-body {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.35s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
     padding: 0 clamp(20px, 2vw, 36px);
 }
 
 .accordion-item.open .accordion-body {
-    grid-template-rows: 1fr;
+    max-height: 2000px;
 }
 
 .accordion-body > * {
-    overflow: hidden;
+    overflow: visible;
 }
 
 .accordion-body-inner {
     padding-bottom: clamp(16px, 1.8vw, 32px);
-    padding-top: 0;
-    margin-top: -2mm;
+    padding-top: 8px;
 }
 
 .accordion-perex {
@@ -1017,7 +1016,8 @@ nav a[href="#kontakt"] {
 .kontakt-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 12px;
 }
 
 .kontakt-card {
@@ -1046,6 +1046,29 @@ nav a[href="#kontakt"] {
     line-height: 1.6;
     text-decoration: none;
     display: block;
+}
+
+.kontakt-info-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid #E8EDF2;
+}
+
+.kontakt-info-row:last-child {
+    border-bottom: none;
+}
+
+.kontakt-info-row .kontakt-card-label {
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.kontakt-info-row .kontakt-card-value {
+    display: inline;
+    text-align: left;
 }
 
 .kontakt-gold {

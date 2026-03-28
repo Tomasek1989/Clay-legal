@@ -708,7 +708,7 @@ nav a[href="#kontakt"] {
 
 /* Specializace */
 .specializace-intro {
-    font-size: clamp(0.85rem, 0.9vw, 1.05rem);
+    font-size: 1rem;
     line-height: 1.8;
     color: #4A5568;
     max-width: 720px;

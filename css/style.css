@@ -274,7 +274,18 @@ nav a[href="#kontakt"] {
     font-weight: 400;
 }
 
+.hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(0.85rem, 1vw, 1.1rem);
+    color: white;
+    letter-spacing: 0.12em;
+    margin-top: -1.4rem;
+    margin-bottom: 2rem !important;
+    font-weight: 400;
+}
+
 .hero-content p {
+    font-family: 'Playfair Display', serif;
     font-size: clamp(1rem, 1.2vw, 1.4rem);
     margin-bottom: 2rem;
 }
@@ -382,6 +393,72 @@ nav a[href="#kontakt"] {
     text-transform: uppercase;
     color: var(--gold);
     padding-top: 4px;
+}
+
+.proc-slider {
+    position: relative;
+}
+
+.proc-track {
+    position: relative;
+}
+
+.proc-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.proc-slide.active {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.proc-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.proc-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: #CBD5E0;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 0;
+}
+
+.proc-dot.active {
+    background: var(--gold);
+}
+
+.proc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.proc-quote {
+    font-family: 'Fira Sans', sans-serif;
+    font-style: italic;
+    color: #718096;
+    font-size: clamp(0.8rem, 0.85vw, 1rem);
+    line-height: 1.75;
+    margin-bottom: 12px;
+}
+
+.proc-quote cite {
+    font-style: italic;
 }
 
 .values-grid {

@@ -51,6 +51,7 @@ h3 {
     text-decoration: none;
     border-radius: 4px;
     transition: background 0.3s;
+    font-family: 'Playfair Display', serif;
     font-weight: 600;
 }
 

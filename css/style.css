@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     color: var(--navy);
     line-height: 1.6;
 }
@@ -375,7 +375,7 @@ nav a[href="#kontakt"] {
 }
 
 .onas-block-label {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -551,7 +551,7 @@ nav a[href="#kontakt"] {
 }
 
 .category-label {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -1012,7 +1012,7 @@ nav a[href="#kontakt"] {
     border-radius: 6px;
     padding: 12px 14px;
     font-size: 0.9rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     color: var(--navy);
     background: #F8FAFC;
     transition: border-color 0.2s;

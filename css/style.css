@@ -921,6 +921,14 @@ nav a[href="#kontakt"] {
     background: #F2F4F7;
 }
 
+.kontakt-mapa {
+    margin-top: 48px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+
 .kontakt-layout {
     display: grid;
     grid-template-columns: 1fr 1.6fr;

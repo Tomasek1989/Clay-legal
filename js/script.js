@@ -78,13 +78,6 @@ function startStatsCountUp() {
     });
 }
 
-// Výška hero sekce podle skutečné viditelné plochy (bez taskbaru)
-function setHeroHeight() {
-    document.getElementById('hero').style.height = window.innerHeight + 'px';
-}
-
-setHeroHeight();
-window.addEventListener('resize', setHeroHeight);
 
 // Testimonial slider
 function initTestimonialSlider() {
@@ -297,14 +290,12 @@ function initProcSlider() {
         menu.classList.add('open');
         menu.setAttribute('aria-hidden', 'false');
         btn.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden';
     }
 
     function closeMenu() {
         menu.classList.remove('open');
         menu.setAttribute('aria-hidden', 'true');
         btn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
     }
 
     btn.addEventListener('click', openMenu);
@@ -321,7 +312,6 @@ function initProcSlider() {
 
 // Spustit count-up po načtení stránky (s malým zpožděním pro fade-in)
 window.addEventListener('load', () => {
-    setHeroHeight();
     initCasesSlider();
     initTestimonialSlider();
 

@@ -975,6 +975,15 @@ nav a[href="#kontakt"] {
     color: var(--gold);
 }
 
+.testimonial-arrow:focus {
+    outline: none;
+}
+
+.testimonial-arrow:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
 .testimonial-dots {
     display: flex;
     gap: 8px;

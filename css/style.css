@@ -1074,6 +1074,15 @@ nav a[href="#kontakt"] {
     text-align: left;
 }
 
+/* Prevent iOS/Android auto-detected links (phone/address) in contact info rows */
+.kontakt-info-row a[x-apple-data-detectors],
+.kontakt-info-row a[href^="tel"],
+.kontakt-info-row a[href^="sms"] {
+    color: inherit !important;
+    text-decoration: none !important;
+    pointer-events: none;
+}
+
 .kontakt-gold {
     color: var(--gold);
 }

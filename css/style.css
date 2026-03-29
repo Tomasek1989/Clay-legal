@@ -283,7 +283,7 @@ nav a[href="#kontakt"] {
     font-size: clamp(1.2rem, 2vw, 2.25rem);
     color: white;
     letter-spacing: 0.12em;
-    margin-top: -1.4rem;
+    margin-top: -2.4rem;
     margin-bottom: 2rem !important;
     font-weight: 400;
 }

@@ -1526,14 +1526,19 @@ footer a {
           fit without a mile of vertical scrolling ---  */
     .hero-stats {
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 24px;
     }
 
     .stat-value {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
     }
 
     .stat {
-        padding: 14px 12px;
+        padding: 10px 10px;
     }
 
     /* --- Section padding --- */

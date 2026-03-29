@@ -280,7 +280,7 @@ nav a[href="#kontakt"] {
 
 .hero-subtitle {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(0.85rem, 1vw, 1.1rem);
+    font-size: clamp(1.8rem, 3vw, 3.2rem);
     color: white;
     letter-spacing: 0.12em;
     margin-top: -1.4rem;
@@ -290,7 +290,9 @@ nav a[href="#kontakt"] {
 
 .hero-content p {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    font-size: clamp(0.85rem, 1vw, 1.1rem);
+    letter-spacing: 0.12em;
+    font-weight: 400;
     margin-bottom: 2rem;
 }
 

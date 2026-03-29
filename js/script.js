@@ -310,10 +310,24 @@ function initProcSlider() {
     });
 })();
 
+// Equalize accordion header heights on mobile
+function equalizeAccordionHeaders() {
+    const headers = document.querySelectorAll('.accordion-header');
+    if (!headers.length) return;
+    headers.forEach(h => h.style.height = '');
+    if (window.innerWidth > 768) return;
+    let max = 0;
+    headers.forEach(h => { max = Math.max(max, h.offsetHeight); });
+    headers.forEach(h => h.style.height = max + 'px');
+}
+
+window.addEventListener('resize', equalizeAccordionHeaders);
+
 // Spustit count-up po načtení stránky (s malým zpožděním pro fade-in)
 window.addEventListener('load', () => {
     initCasesSlider();
     initTestimonialSlider();
+    equalizeAccordionHeaders();
 
     // Na mobilu rovnou zobraz finální hodnoty bez animace
     if (window.innerWidth <= 768) {
